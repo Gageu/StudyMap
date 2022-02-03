@@ -33,7 +33,14 @@ class _MyAppState extends State<MyApp> {
             target: _center,
             zoom: 11.0,
           ),
+          zoomControlsEnabled: false,
         ),
+        floatingActionButton: FloatingActionButton(
+            onPressed: () {
+              // Add your onPressed code here!
+            },
+            backgroundColor: Colors.blue,
+            child: const Icon(Icons.add)),
       ),
     );
   }
