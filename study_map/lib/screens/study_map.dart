@@ -59,10 +59,14 @@ class _MapScreenState extends State<StudyMap> {
             ActionButton(
               onPressed: () => _showAction(context, 0),
               icon: const Icon(Icons.search),
+              primaryColor: Colors.blue,
+              secondaryColor: Colors.white,
             ),
             ActionButton(
               onPressed: () => _showAction(context, 1),
               icon: const Icon(Icons.add),
+              primaryColor: Colors.blue,
+              secondaryColor: Colors.white,
             ),
             ActionButton(
               onPressed: () => _showAction(context, 2),
