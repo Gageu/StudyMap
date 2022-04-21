@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'calendar.dart';
 
 void main() => runApp(const MyApp());
 
@@ -22,6 +23,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {'/second': (context) => CalendarScreen()},
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Maps Sample App'),
@@ -38,6 +40,7 @@ class _MyAppState extends State<MyApp> {
         floatingActionButton: FloatingActionButton(
             onPressed: () {
               // Add your onPressed code here!
+              Navigator.pushNamed(context, '/second');
             },
             backgroundColor: Colors.blue,
             child: const Icon(Icons.add)),
