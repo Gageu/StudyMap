@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class CalendarScreen extends StatefulWidget {
+<<<<<<< Updated upstream
+=======
+  const CalendarScreen({Key? key}) : super(key: key);
+
+>>>>>>> Stashed changes
   @override
   _TableBasicsExampleState createState() => _TableBasicsExampleState();
 }
