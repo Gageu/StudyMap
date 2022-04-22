@@ -2,11 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class CalendarScreen extends StatefulWidget {
-<<<<<<< Updated upstream
-=======
   const CalendarScreen({Key? key}) : super(key: key);
 
->>>>>>> Stashed changes
   @override
   _TableBasicsExampleState createState() => _TableBasicsExampleState();
 }
@@ -20,11 +17,7 @@ class _TableBasicsExampleState extends State<CalendarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-<<<<<<< Updated upstream
-        title: Text('TableCalendar - Basics'),
-=======
         title: const Text('TableCalendar - Basics'),
->>>>>>> Stashed changes
       ),
       body: TableCalendar(
         firstDay: DateTime.utc(2022, 1, 1),
