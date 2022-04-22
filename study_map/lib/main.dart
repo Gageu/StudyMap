@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'calendar.dart';
+import 'screens/calendar.dart';
 import 'package:study_map/screens/study_map.dart';
 
 void main() {
@@ -11,7 +11,8 @@ void main() {
     initialRoute: '/study_map',
     routes: {
       // '/' : (conetxt) Loading();
-      '/study_map': (context) => const StudyMap()
+      '/study_map': (context) => const StudyMap(),
+      '/calendar': (context) => const CalendarScreen()
     },
   ));
 }
