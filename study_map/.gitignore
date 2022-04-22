@@ -33,6 +33,7 @@
 
 # Web related
 lib/generated_plugin_registrant.dart
+/web/manifet.json
 
 # Symbolication related
 app.*.symbols
@@ -44,3 +45,6 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+study_map/web/index.html
+study_map/android/app/src/main/AndroidManifest.xml
+study_map/ios/Runner/AppDelegate.swift

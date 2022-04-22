@@ -26,6 +26,10 @@ Flutter/flutter_assets/
 Flutter/flutter_export_environment.sh
 ServiceDefinitions.json
 Runner/GeneratedPluginRegistrant.*
+Runner/AppDelegate.swift
+study_map/web/index.html
+study_map/android/app/src/main/AndroidManifest.xml
+study_map/ios/Runner/AppDelegate.swift
 
 # Exceptions to above rules.
 !default.mode1v3

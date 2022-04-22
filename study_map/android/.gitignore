@@ -4,6 +4,10 @@ gradle-wrapper.jar
 /gradlew
 /gradlew.bat
 /local.properties
+/src/main/AndroidManifest.xml
+study_map/web/index.html
+study_map/android/app/src/main/AndroidManifest.xml
+study_map/ios/Runner/AppDelegate.swift
 GeneratedPluginRegistrant.java
 
 # Remember to never publicly share your keystore.
