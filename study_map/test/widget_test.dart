@@ -7,8 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:study_map/main.dart';
+//import 'package:study_map/main.dart';
 import 'package:study_map/screens/study_map.dart';
 
 void main() {

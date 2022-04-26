@@ -39,11 +39,22 @@ class _MapScreenState extends State<StudyMap> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: Theme.of(context),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Maps Sample App'),
           backgroundColor: Colors.green[700],
+          actions: <Widget>[
+            Padding(
+                padding: const EdgeInsets.only(right: 10.0),
+                child: ActionButton(
+                  onPressed: () => Navigator.pushNamed(context, '/login'),
+                  icon: const Icon(Icons.account_circle),
+                  primaryColor: Colors.blue,
+                  secondaryColor: Colors.white,
+                )),
+          ],
         ),
         body: GoogleMap(
           onMapCreated: _onMapCreated,
