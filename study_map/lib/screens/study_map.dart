@@ -80,8 +80,8 @@ class _MapScreenState extends State<StudyMap> {
               secondaryColor: Colors.white,
             ),
             ActionButton(
-              onPressed: () => _showAction(context, 2),
-              icon: const Icon(Icons.settings),
+              onPressed: () => Navigator.pushNamed(context, '/calendar'),
+              icon: const Icon(Icons.calendar_today_rounded),
               primaryColor: Colors.blue,
               secondaryColor: Colors.white,
             ),
