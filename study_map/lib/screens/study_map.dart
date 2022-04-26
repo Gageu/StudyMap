@@ -2,6 +2,46 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:study_map/widgets/expandable_vertical_fab_menu.dart';
 
+class Account {
+  String name;
+  String password;
+
+  Account({required this.name, required this.password});
+
+  String getName() {
+    return name;
+  }
+}
+
+class Group {
+  String name;
+  String location;
+  String time;
+  List<Account> memberList = List.empty(growable: true);
+
+  Group(
+      {required this.name,
+      required this.location,
+      required this.time,
+      required this.memberList});
+
+  String getName() {
+    return name;
+  }
+
+  String getLocation() {
+    return location;
+  }
+
+  String getTime() {
+    return time;
+  }
+
+  List getMembers() {
+    return memberList;
+  }
+}
+
 class StudyMap extends StatefulWidget {
   const StudyMap({Key? key}) : super(key: key);
 

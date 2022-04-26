@@ -17,7 +17,7 @@ class _TableBasicsExampleState extends State<CalendarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('TableCalendar - Basics'),
+        title: const Text('Study Event Calendar'),
       ),
       body: TableCalendar(
         firstDay: DateTime.utc(2022, 1, 1),
