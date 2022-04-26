@@ -17,6 +17,8 @@ class _GroupScreenState extends State<GroupScreen> {
     super.dispose();
   }
 
+  //group should have text boxes to create a group
+
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Welcome to Flutter',

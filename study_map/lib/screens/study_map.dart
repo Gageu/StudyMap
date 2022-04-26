@@ -3,42 +3,62 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:study_map/widgets/expandable_vertical_fab_menu.dart';
 
 class Account {
-  String name;
-  String password;
+  String name; //account name
+  String password; //account password
 
-  Account({required this.name, required this.password});
+  Account({required this.name, required this.password}); //constructor
 
   String getName() {
     return name;
+  }
+
+  void setPassword(String newpassword) {
+    password = newpassword;
   }
 }
 
 class Group {
-  String name;
-  String location;
-  String time;
-  List<Account> memberList = List.empty(growable: true);
+  String name; //name of group
+  List<Account> memberList =
+      List.empty(growable: true); //list of members in group
 
-  Group(
-      {required this.name,
-      required this.location,
-      required this.time,
-      required this.memberList});
+  Group({required this.name, required this.memberList}); //constructor
 
   String getName() {
     return name;
   }
 
-  String getLocation() {
-    return location;
-  }
-
-  String getTime() {
-    return time;
-  }
-
   List getMembers() {
     return memberList;
+  }
+
+  void setName(String newname) {
+    name = newname;
+  }
+
+  void addMember(Account member) {
+    memberList.add(member);
+  }
+}
+
+class StudyEvent {
+  String name;
+  String location; // this will be a pin when created
+  String time;
+  List<Account> memberList = List.empty(growable: true);
+
+  StudyEvent({required this.name, required this.location, required this.time});
+
+  //adding individual members
+  void addMember(Account member) {
+    memberList.add(member);
+  }
+
+  //if group was linked to a study event, add all group members
+  void addGroupMembers(Group group) {
+    for (var account in group.getMembers()) {
+      memberList.add(account);
+    }
   }
 }
 
@@ -103,7 +123,7 @@ class _MapScreenState extends State<StudyMap> {
               secondaryColor: Colors.white,
             ),
             ActionButton(
-              onPressed: () => _showAction(context, 1),
+              onPressed: () => Navigator.pushNamed(context, '/group'),
               icon: const Icon(Icons.add),
               primaryColor: Colors.blue,
               secondaryColor: Colors.white,

@@ -8,6 +8,8 @@ class CalendarScreen extends StatefulWidget {
   _TableBasicsExampleState createState() => _TableBasicsExampleState();
 }
 
+//implemtation is all from table_calendar's examples. refrence the site if you're having trouble
+//should add studyevents to certain days
 class _TableBasicsExampleState extends State<CalendarScreen> {
   CalendarFormat _calendarFormat = CalendarFormat.month;
   DateTime _focusedDay = DateTime.now();
