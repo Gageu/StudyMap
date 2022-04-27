@@ -63,7 +63,7 @@ void main() {
       // '/' : (conetxt) Loading();
       '/study_map': (context) => const StudyMap(),
       '/calendar': (context) => const CalendarScreen(),
-      '/group': (context) => const GroupScreen()
+      '/group': (context) => const GroupScreen(),
       '/login': (context) => const LoginDemo(),
     },
   ));
