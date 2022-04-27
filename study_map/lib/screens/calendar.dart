@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:study_map/data_architecture/events.dart';
 
 class CalendarScreen extends StatefulWidget {
   const CalendarScreen({Key? key}) : super(key: key);
@@ -8,6 +9,8 @@ class CalendarScreen extends StatefulWidget {
   _TableBasicsExampleState createState() => _TableBasicsExampleState();
 }
 
+//implemtation is all from table_calendar's examples. refrence the site if you're having trouble
+//should add studyevents to certain days
 class _TableBasicsExampleState extends State<CalendarScreen> {
   CalendarFormat _calendarFormat = CalendarFormat.month;
   DateTime _focusedDay = DateTime.now();
@@ -17,7 +20,7 @@ class _TableBasicsExampleState extends State<CalendarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('TableCalendar - Basics'),
+        title: const Text('Study Event Calendar'),
       ),
       body: TableCalendar(
         firstDay: DateTime.utc(2022, 1, 1),

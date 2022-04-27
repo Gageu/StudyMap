@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:study_map/widgets/expandable_vertical_fab_menu.dart';
+import 'package:study_map/data_architecture/events.dart';
 
 //Class declaration for the Map screen
 class StudyMap extends StatefulWidget {
@@ -93,7 +94,7 @@ class _MapScreenState extends State<StudyMap> {
             ),
             //Add-Event Button:
             ActionButton(
-              onPressed: () => _showAction(context, 1),
+              onPressed: () => Navigator.pushNamed(context, '/group'),
               icon: const Icon(Icons.add),
               primaryColor: Colors.blue,
               secondaryColor: Colors.white,

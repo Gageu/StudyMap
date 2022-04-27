@@ -17,6 +17,7 @@ import 'screens/calendar.dart';
 import 'package:study_map/screens/login.dart';
 import 'package:study_map/screens/calendar.dart';
 import 'package:study_map/screens/study_map.dart';
+import 'screens/group.dart';
 
 //This is the main file of our app, where everything starts.
 //Things that should go in this file are as follows:
@@ -62,6 +63,7 @@ void main() {
       // '/' : (conetxt) Loading();
       '/study_map': (context) => const StudyMap(),
       '/calendar': (context) => const CalendarScreen(),
+      '/group': (context) => const GroupScreen()
       '/login': (context) => const LoginDemo(),
     },
   ));
