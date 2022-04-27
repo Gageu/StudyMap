@@ -1,66 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:study_map/widgets/expandable_vertical_fab_menu.dart';
-
-class Account {
-  String name; //account name
-  String password; //account password
-
-  Account({required this.name, required this.password}); //constructor
-
-  String getName() {
-    return name;
-  }
-
-  void setPassword(String newpassword) {
-    password = newpassword;
-  }
-}
-
-class Group {
-  String name; //name of group
-  List<Account> memberList =
-      List.empty(growable: true); //list of members in group
-
-  Group({required this.name, required this.memberList}); //constructor
-
-  String getName() {
-    return name;
-  }
-
-  List getMembers() {
-    return memberList;
-  }
-
-  void setName(String newname) {
-    name = newname;
-  }
-
-  void addMember(Account member) {
-    memberList.add(member);
-  }
-}
-
-class StudyEvent {
-  String name;
-  String location; // this will be a pin when created
-  String time;
-  List<Account> memberList = List.empty(growable: true);
-
-  StudyEvent({required this.name, required this.location, required this.time});
-
-  //adding individual members
-  void addMember(Account member) {
-    memberList.add(member);
-  }
-
-  //if group was linked to a study event, add all group members
-  void addGroupMembers(Group group) {
-    for (var account in group.getMembers()) {
-      memberList.add(account);
-    }
-  }
-}
+import 'package:study_map/data_architecture/events.dart';
 
 class StudyMap extends StatefulWidget {
   const StudyMap({Key? key}) : super(key: key);
