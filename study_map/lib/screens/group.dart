@@ -1,36 +1,73 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:study_map/data_architecture/events.dart';
 
-class GroupScreen extends StatefulWidget {
+class GroupScreen extends StatelessWidget {
   const GroupScreen({Key? key}) : super(key: key);
 
+  static const String _title = 'Group Creation Screen';
+
   @override
-  _GroupScreenState createState() => _GroupScreenState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        title: _title,
+        home: Scaffold(
+          appBar: AppBar(
+            title: const Text(_title),
+          ),
+          body: const MyStatefulWidget(),
+        ));
+  }
 }
 
-class _GroupScreenState extends State<GroupScreen> {
-  final myController = TextEditingController();
+class MyStatefulWidget extends StatefulWidget {
+  const MyStatefulWidget({Key? key}) : super(key: key);
+
+  @override
+  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+}
+
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  late TextEditingController _controller;
+  String displayText = "";
+  String memberText = "Members: ";
+  List<String> accountMembers = [
+    "balls"
+  ]; //replace this with current account once everything is linked
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = TextEditingController();
+  }
 
   @override
   void dispose() {
-    myController.dispose();
+    _controller.dispose();
     super.dispose();
   }
 
-  //group should have text boxes to create a group
-
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Study Groups',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Group Creation'),
+    return Scaffold(
+      body: Column(children: [
+        TextField(
+          //adding completely new groups
+          controller: _controller,
+          decoration: const InputDecoration(labelText: "Group Name:"),
         ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
+        ElevatedButton(
+            onPressed: () {
+              setState(() {
+                String memberList = accountMembers.join(", ");
+                displayText =
+                    _controller.text + " - " + memberText + memberList;
+              });
+            },
+            child: const Text("Create Group")),
+        Text(
+          displayText,
+          style: const TextStyle(fontSize: 20),
+        )
+      ]),
     );
   }
 }
